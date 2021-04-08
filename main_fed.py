@@ -64,7 +64,7 @@ if __name__ == '__main__':
             exit('Error: only consider IID setting in CIFAR10')
     elif args.dataset == 'traffic':
         dataset_train, dataset_test = get_train_valid_loader(
-            '/home/liuyi/Documents/federated-learning-master/federated-learning-master/data',
+            '/Users/austineyapp/Documents/REP/Year_4/FYP/FederatedLearning/Federated-Learning-for-Traffic-Sign-Recognition',
             batch_size=32, num_workers=0)
         if args.iid:
             dict_users = traffic_iid(dataset_train, args.num_users)
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     best_loss = None
     val_acc_list, net_list = [], []
 
-    if args.all_clients: 
+    if args.all_clients:
         print("Aggregation over all clients")
         w_locals = [w_glob for i in range(args.num_users)]
     for iter in range(args.epochs):

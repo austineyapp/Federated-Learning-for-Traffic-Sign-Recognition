@@ -84,7 +84,7 @@ if __name__ == '__main__':
         dataset_train = datasets.CIFAR10('./data/cifar', train=True, transform=transform, target_transform=None, download=True)
         img_size = dataset_train[0][0].shape
     elif args.dataset == 'traffic':
-        dataset_train, dataset_test = get_train_valid_loader('/home/liuyi/Documents/federated-learning-master/federated-learning-master/data',
+        dataset_train, dataset_test = get_train_valid_loader('/Users/austineyapp/Documents/REP/Year_4/FYP/FederatedLearning/Federated-Learning-for-Traffic-Sign-Recognition',
                                                                          batch_size=32, num_workers=0)
 
     else:
